@@ -304,18 +304,6 @@ Worker Pool 1  Worker Pool 2  Worker Pool 3  (Add more as needed)
    - Redis Sentinel for automatic failover
    - Separate instances for different purposes (queues, cache, rate limiting)
 
-**Scaling Triggers:**
-
-| Metric | Threshold | Action |
-|--------|-----------|--------|
-| API CPU Usage | >70% | Add API server |
-| API Response Time | >500ms | Add API server |
-| Queue Depth | >100 jobs waiting | Add workers |
-| Average Job Wait | >2 minutes | Increase worker concurrency |
-| Worker CPU | >80% | Add worker server |
-| DB Connections | >80% of pool | Add read replica or increase pool |
-| DB Query Time | >100ms | Add indexes or read replica |
-
 ---
 
 #### **Performance Optimizations**
